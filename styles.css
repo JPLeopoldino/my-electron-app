@@ -26,12 +26,6 @@ header{
     padding: 10px;
 }
 
-header h1{
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
 .div-line-header{
     width: 40%;
     height: 2px;
@@ -44,6 +38,7 @@ header h1{
     margin: 20px;
     text-decoration: none;
     color: #FFF;
+    font-weight: bold;
 }
 
 .nav a:hover{
@@ -58,28 +53,111 @@ main{
     justify-content: center;
 }
 
-.perfil-img{
-    margin-top: 50px;
-    margin-bottom: 20px;
-    width: 15%;
-    height: auto;
-    border-radius: 300px;
-    border: 2px solid rgb(81, 0, 187);
+/* ===== index ===== */
+.splash-bg{
+    background-color: rgb(81, 0, 187);
 }
-
-body > h1{
+.splash-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    border-radius: 80px;
+    background-color: #212529;
+    padding: 5rem 5rem;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+}
+.splash-title{
     font-weight: bold;
-    font-size: 250%;
+    font-size: 38px;
+    position: relative;
+    margin-bottom: 40px;
+}
+.splash-title::after{
+    content: "";
+    width: 80%;
+    height: 3px;
+    background-color: #FFF;
+    position: absolute;
+    left: 10%;
+    bottom: -15px;
+    border-radius: 30px;
+}
+.splash-description{
+    letter-spacing: 1px;
+    width: 80%;
+    text-align: center;
+}
+.splash-button{
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FFF;
+    background-color: rgb(81, 0, 187);
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.splash-button:hover{
+    background-color: rgb(69, 6, 153);
+    color: #FFF;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.2s ease-in-out;
+}
+.splash-button:active{
+    background-color: #FFF;
+    color: rgb(69, 6, 153);
+    transition: 0.05s ease-in-out;
 }
 
+/* ===== Home ===== */
+.home-main-container{
+    margin: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home-container{
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.home-container img{
+    height: auto;
+    width: 120px;
+    margin-right: 40px;
+    background-color: #FFF;
+    border-radius: 30px;
+    padding: 20px;
+}
+.home-container p{
+    color: #FFF;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+}
+.home-container p::after{
+    content: "";
+    height: 100%;
+    width: 3px;
+    border-radius: 99px;
+    background-color: #FFF;
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
 .div-line{
     width: 60%;
     height: 2px;
     background-color: white;
-    margin-top: 30px;
+    margin: 20px 0;
     border-radius: 99px;
 }
-
 .div-line-2{
     width: 30%;
     height: 2px;
@@ -87,53 +165,135 @@ body > h1{
     margin-bottom: 30px;
     border-radius: 99px;
 }
-
-.container{
-    margin: 80px;
+.home-cards-container{
     display: flex;
-    flex-direction: row;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    width: 50%;
 }
-
-.container img{
+.home-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #52575B;
+    margin: 30px 10px;
+    padding: 60px 40px;
+    border-radius: 20px;
+}
+.card-img{
     height: auto;
-    width: 20%;
-    margin-right: 40px;
+    width: 90px;
+    margin-bottom: 40px;
+}
+.card-title{
+    font-weight: bold;
+    font-size: 32px;
+    max-width: 80px;
+}
+.home-card:hover{
+    background-color: rgb(81, 0, 187);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    margin: 30px 12px;
+    transition: 0.2s ease-in;
+}
+.home-card:hover .card-img{
+    width: 85px;
+    transition: 0.2s ease-in;
+    opacity: 80%;
 }
 
-.container p{
-    color: #FFF;
-    text-align: center;
-    font-size: 20px;
-}
-
+/* ===== Contato ===== */
 form{
     background-color: #52575B;
     margin: 40px 40px;
-    padding: 80px;
+    padding: 50px 120px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
+form h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+form p{
+    color: rgb(168, 168, 168);
+    letter-spacing: 2px;
+    font-size: 14px;
+}
 form div{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 20px 0 ;
+    position: relative;
+    width: 100%;
 }
-
+form div label{
+    font-weight: bold;
+    position: absolute;
+    top: -22px;
+    left: 0;
+    font-size: 14px;
+}
+form div label span{
+    color: rgb(168, 168, 168);
+    font-weight: bold;
+    font-size: 16px;
+}
+::placeholder{
+    color: rgb(206, 177, 245);
+}
+input[type=date]:invalid::-webkit-datetime-edit {
+    color: rgb(206, 177, 245);
+}
 form div input{
     border-radius: 10px;
-    padding: 5px;
+    padding: 8px 15px;
+    width: 100%;
+    border-width: 0;
+    color: rgb(81, 0, 187);
 }
-
-form > p{
-    color: rgb(168, 168, 168);
+form div input:focus{
+    outline: 0;
+    background-color: rgb(81, 0, 187);
+    color: #FFF;
+    transition: 0.2s ease-in;
 }
-
+form fieldset{
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 form fieldset legend{
-    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 14px;
 }
-
+form fieldset label{
+    transform: translateX(-10px);
+    font-weight: bold;
+}
+form div textarea{
+    width: 100%;
+    padding: 8px 15px;
+    color: rgb(81, 0, 187);
+    border-radius: 10px;
+}
+form div textarea:focus{
+    outline: 0;
+    background-color: rgb(81, 0, 187);
+    color: #FFF;
+    transition: 0.2s ease-in;
+}
+.buttons-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
 form button{
     padding: 10px 25px 10px 25px;
     background-color: rgb(81, 0, 187);
@@ -142,22 +302,111 @@ form button{
     border-radius: 10px;
     border: none;
 }
-
 form button:last-child{
     background-color: rgb(82, 23, 160);
 }
-
 form button:hover{
     transition: 0.2s ease-in;
     padding: 10px 25px 10px 25px;
     background-color: rgb(69, 6, 153);
 }
 
-.sidebar-menu{
+/* ===== About ===== */
+.logoff-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 27px 20px 0;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 99px;
+}
+.logoff-btn:hover{
+    transition: 0.2s ease-in;
+    background-color: rgb(111, 0, 255);
+}
+.logoff-btn:hover .gg-log-off{
+    border-color: #FFF;
+    border-top-color: transparent;
+    transition: 0.2s ease-in;
+}
+.logoff-btn:hover .gg-log-off::before{
+    background-color: #FFF;
+    transition: 0.2s ease-in;
+}
+.logoff-btn:active{
+    background-color: rgb(69, 6, 153);
+}
+.gg-log-off{
+    border-color: rgb(81, 0, 187);
+    border-top-color: transparent;
+}
+.gg-log-off::before{
+    background-color: rgb(81, 0, 187);
+}
+.profile-container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.perfil-img{
+    margin: 50px 50px;
+    width: 15%;
+    height: auto;
+    border-radius: 300px;
+    border: 8px solid rgb(81, 0, 187);
+    flex: 2;
+}
+.informations-container{
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.informations-container p:first-child{
+    font-size: 28px;
+    color: #FFF;
+}
+.informations-container p{
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: #adadad;
+}
+.medias-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20%;
+    margin-top: 30px;
+    width: 100%;
+}
+.medias-buttons img{
+    height: auto;
+    width: 80px;
+    cursor: pointer;
+}
+.medias-buttons img:hover{
+    background-color: rgb(81, 0, 187);
+    border-radius: 99px;
+    transition: 0.2s ease-in;
+}
+.medias-buttons img:active{
+    opacity: 10%;
+    transition: 0.1s ease-in;
+}
+
+
+
+
+
+
+/* .sidebar-menu{
     width: 225px;
     color: #FFF;
     align-self: flex-start;
     height: 100%;
     background-color: rgb(69, 6, 153);
-}
-
+} */
